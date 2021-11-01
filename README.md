@@ -2,64 +2,61 @@
 
 # Project Name
 
-> One paragraph statement about the project.
+> Calculator
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This Website is React Bookstore Project. You can add your books, follow your progress, categorize, add, and, of course, Delete.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML, CSS, JavaScript, ReactJS, Redux
+- VS Code
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link]()
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- VSCODE
+
+- OS with Git installed on it
+
+- NPM
+
 ### Setup
 
-### Install
+**Run** 
+git clone https://github.com/AmineHLub/book-store.git
 
-### Usage
+npm start
 
-### Run tests
+**Test**
 
-### Deployment
+### Test
 
-
+No testing available yet.
 
 ## Authors
 
-👤 **Author1**
+👤 **Mohamed Amine Hajltaief**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@AmineHLub](https://github.com/AmineHLub)
+- Twitter: [@Amino47612441](https://twitter.com/Amino47612441)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-amine-hajltaief-b18863163/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Any contributing is welcome
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/AmineHLub/math-magician/issues).
 
 ## Show your support
 
@@ -67,10 +64,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- This project belongs to [Microverse](https://microverse.org/).
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+- This project is [MIT](./Licenses/MIT.md) licensed.

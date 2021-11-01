@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  background-color: white;
+}
+
+.navbar > .left-side {
+  width: inherit;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.left-side > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.left-side > ul > li {
+  margin: 0 0 0 50px;
+}
+
+.right-side {
+  margin-right: 8%;
+}

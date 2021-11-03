@@ -1,24 +1,7 @@
 import React from 'react';
 import '../../styles/book.css';
 
-const temp = [
-  {
-    genre: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Callins',
-    completionPercentage: '64%',
-    currentChapter: 'Chapter 17',
-    id: 1,
-  },
-  {
-    genre: 'Thriller',
-    title: 'The Hunger Games second Ed',
-    author: 'Suzanne Callins',
-    completionPercentage: '10%',
-    currentChapter: 'Chapter 5',
-    id: 2,
-  },
-];
+const temp = [];
 
 const Book = () => (
   temp.map((el) => (

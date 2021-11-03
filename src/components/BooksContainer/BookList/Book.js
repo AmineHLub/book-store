@@ -11,9 +11,9 @@ const Book = () => (
         <h3 className="title">{el.title}</h3>
         <span className="author">{el.author}</span>
         <ul className="book-management d-flex">
-          <li>Comments</li>
-          <li>Remove</li>
-          <li>Edit</li>
+          <li><button type="button">Comments</button></li>
+          <li><button type="button">Remove</button></li>
+          <li><button type="button">Edit</button></li>
         </ul>
       </div>
       <div className="completion-detail">

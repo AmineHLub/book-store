@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable no-unused-vars */
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navigation/Navbar';

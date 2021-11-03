@@ -1,0 +1,10 @@
+.adding-form {
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adding-span {
+  margin: 0;
+  color: rgb(85, 85, 85);
+}

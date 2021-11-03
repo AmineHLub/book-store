@@ -6,7 +6,8 @@ export default function AddBook() {
     <form action="#">
       <h2 className="adding-span">Add a new book</h2>
       <div className="adding-form d-flex">
-        <input className="book-input" />
+        <input className="book-input" placeholder="Title" />
+        <input className="book-input" placeholder="Author" />
         <select className="selector">
           <option selected disabled>Categories</option>
         </select>

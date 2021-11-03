@@ -26,12 +26,20 @@ export default function AddBook() {
       completionPercentage: '0%',
       currentChapter: 'Chapter 0',
     };
+    if (title.length > 0 && author.length > 0) { dispatch(addBook(newBook)); }
+    return null;
+  };
 
-    dispatch(addBook(newBook));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.children[1].children[0].value = null;
+    e.target.children[1].children[1].value = null;
+    setTitle('');
+    setAuthor('');
   };
 
   return (
-    <form action="#">
+    <form onSubmit={handleSubmit} action="#">
       <h2 className="adding-span">Add a new book</h2>
       <div className="adding-form d-flex">
         <input className="book-input" placeholder="Title" onChange={(e) => { handleTitleChange(e); }} />
@@ -39,7 +47,7 @@ export default function AddBook() {
         <select defaultValue="Categories" className="selector">
           <option disabled>Categories</option>
         </select>
-        <button type="button" onClick={submitBookToStore}>ADD BOOK</button>
+        <button type="submit" onClick={submitBookToStore}>ADD BOOK</button>
       </div>
     </form>
   );

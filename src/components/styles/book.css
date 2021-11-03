@@ -1,0 +1,27 @@
+.d-flex {
+  display: flex;
+}
+
+.book-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.general-info {
+  flex-flow: column wrap;
+  width: 30%;
+}
+
+.title {
+  margin: 0;
+}
+
+.book-management {
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.current-chapter {
+  flex-direction: column;
+}

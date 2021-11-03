@@ -1,0 +1,51 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.website-logo-name {
+  margin: 15px 0;
+  color: rgb(3, 118, 196);
+}
+
+.navbar > .left-side {
+  width: inherit;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.left-side > ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+.left-side > ul > li {
+  margin: 0 0 0 50px;
+}
+
+.right-side {
+  margin: 7px 8% 0 0;
+}
+
+.right-side > img {
+  width: 70%;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+}
+
+.activelinks {
+  color: rgb(71, 71, 71);
+}

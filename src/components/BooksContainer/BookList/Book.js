@@ -1,10 +1,17 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import '../../styles/book.css';
+import { removeBook } from '../../../Redux/Books/BookState';
 
-const Book = (tempObj) => {
-  const { temp } = tempObj;
+const Book = () => {
+  const arrOfBooks = useSelector((state) => state.booksReducer);
+  const dispatch = useDispatch();
+  const handleRemove = (id) => {
+    dispatch(removeBook(id));
+  };
   return (
-    temp.map((el) => (
+    arrOfBooks.map((el) => (
       <div key={el.id} className="book-container d-flex">
         <div className="general-info d-flex">
           <span className="genre">{el.genre}</span>
@@ -12,7 +19,7 @@ const Book = (tempObj) => {
           <span className="author">{el.author}</span>
           <ul className="book-management d-flex">
             <li><button type="button">Comments</button></li>
-            <li><button type="button">Remove</button></li>
+            <li><button type="button" onClick={() => handleRemove(el.id)}>Remove</button></li>
             <li><button type="button">Edit</button></li>
           </ul>
         </div>

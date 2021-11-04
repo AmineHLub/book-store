@@ -8,9 +8,14 @@ export default function AddBook() {
 
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
+  };
+
+  const handleSelection = (e) => {
+    setCategory(e.target.value);
   };
 
   const handleAuthorChange = (e) => {
@@ -20,7 +25,7 @@ export default function AddBook() {
   const submitBookToStore = () => {
     const id = Math.floor(Math.random() * 100);
     const newBook = [{
-      genre: 'Horror',
+      category,
       title,
       author,
       completionPercentage: '0%',
@@ -32,7 +37,7 @@ export default function AddBook() {
     const postPayload = {
       item_id: id,
       title,
-      category: 'Horror',
+      category,
     };
     if (title.length > 0 && author.length > 0) { dispatch(addBook(innerPayload, postPayload)); }
     return null;
@@ -42,6 +47,7 @@ export default function AddBook() {
     e.preventDefault();
     e.target.children[1].children[0].value = null;
     e.target.children[1].children[1].value = null;
+    e.target.children[1].children[2].value = 'Categories';
     setTitle('');
     setAuthor('');
   };
@@ -52,8 +58,14 @@ export default function AddBook() {
       <div className="adding-form d-flex">
         <input className="book-input" placeholder="Title" onChange={(e) => { handleTitleChange(e); }} />
         <input className="book-input" placeholder="Author" onChange={(e) => handleAuthorChange(e)} />
-        <select defaultValue="Categories" className="selector">
+        <select defaultValue="Categories" onChange={(e) => { handleSelection(e); }} className="selector">
           <option disabled>Categories</option>
+          <option>Action and Adventure</option>
+          <option>Drama</option>
+          <option>Fantasy</option>
+          <option>Historical Fiction</option>
+          <option>Horror</option>
+          <option>Comedy</option>
         </select>
         <button type="submit" onClick={submitBookToStore}>ADD BOOK</button>
       </div>

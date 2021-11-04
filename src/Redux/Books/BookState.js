@@ -4,12 +4,13 @@ import omit from 'object.omit';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_POSTS = 'bookStore/books/GET_POSTS';
+const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cqV2hKEfhqWq3dI8Nmmi/books/';
 
 const initialState = {};
 
 export const addBook = (payload, postPayload) => async (dispatch) => {
   try {
-    await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cqV2hKEfhqWq3dI8Nmmi/books', postPayload);
+    await Axios.post(baseUrl, postPayload);
     dispatch({
       type: ADD_BOOK,
       payload,
@@ -20,7 +21,7 @@ export const addBook = (payload, postPayload) => async (dispatch) => {
 };
 
 export const removeBook = (bookId) => async (dispatch) => {
-  await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cqV2hKEfhqWq3dI8Nmmi/books/${bookId}`,
+  await Axios.delete(`${baseUrl}${bookId}`,
     { item_id: bookId });
   dispatch({
     type: REMOVE_BOOK,
@@ -29,7 +30,7 @@ export const removeBook = (bookId) => async (dispatch) => {
 };
 
 export const fetchPosts = () => async (dispatch) => {
-  const response = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cqV2hKEfhqWq3dI8Nmmi/books');
+  const response = await Axios.get(baseUrl);
   dispatch({
     type: GET_POSTS,
     payload: response.data,

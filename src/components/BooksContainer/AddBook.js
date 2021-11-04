@@ -18,15 +18,23 @@ export default function AddBook() {
   };
 
   const submitBookToStore = () => {
-    const newBook = {
-      genre: 'Thriller',
-      id: Math.floor(Math.random() * 100), // make sure it's unique
+    const id = Math.floor(Math.random() * 100);
+    const newBook = [{
+      genre: 'Horror',
       title,
       author,
       completionPercentage: '0%',
       currentChapter: 'Chapter 0',
+    }];
+    const innerPayload = {};
+    innerPayload[id] = newBook;
+
+    const postPayload = {
+      item_id: id,
+      title,
+      category: 'Horror',
     };
-    if (title.length > 0 && author.length > 0) { dispatch(addBook(newBook)); }
+    if (title.length > 0 && author.length > 0) { dispatch(addBook(innerPayload, postPayload)); }
     return null;
   };
 

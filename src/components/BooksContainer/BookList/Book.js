@@ -10,6 +10,7 @@ const Book = () => {
   }, []);
   const ObjOfBooks = useSelector((state) => state.booksReducer);
   const handleRemove = (id) => {
+    console.log(id);
     dispatch(removeBook(id));
   };
   const arrOfIds = Object.keys(ObjOfBooks);
@@ -17,9 +18,10 @@ const Book = () => {
     arrOfIds.map((el) => {
       const bookInfoObj = {
         id: el,
+        genre: ObjOfBooks[el][0].category,
         title: ObjOfBooks[el][0].title,
         author: 'Amin',
-        completionPercentage: '0',
+        completionPercentage: '0%',
         currentChapter: '0',
       };
       return (
@@ -30,7 +32,7 @@ const Book = () => {
             <span className="author">{bookInfoObj.author}</span>
             <ul className="book-management d-flex">
               <li><button type="button">Comments</button></li>
-              <li><button type="button" onClick={() => handleRemove(bookInfoObj.id)}>Remove</button></li>
+              <li><button type="button" onClick={() => handleRemove(el)}>Remove</button></li>
               <li><button type="button">Edit</button></li>
             </ul>
           </div>

@@ -10,7 +10,6 @@ const Book = () => {
   }, []);
   const ObjOfBooks = useSelector((state) => state.booksReducer);
   const handleRemove = (id) => {
-    console.log(id);
     dispatch(removeBook(id));
   };
   const arrOfIds = Object.keys(ObjOfBooks);

@@ -7,7 +7,7 @@ const BooksContainer = () => (
     <section className="book-list-container">
       <BookList />
     </section>
-    <section className="book-list-container">
+    <section className="adding-containerr">
       <AddBook />
     </section>
   </>

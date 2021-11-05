@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import '../../styles/book.css';
 import { removeBook, fetchPosts } from '../../../Redux/Books/BookState';
+import progressBar from '../../../assets/progress.png';
 
 const Book = () => {
   const dispatch = useDispatch();
@@ -35,12 +36,21 @@ const Book = () => {
               <li><button type="button">Edit</button></li>
             </ul>
           </div>
-          <div className="completion-detail">
-            <span className="completion">{bookInfoObj.completionPercentage}</span>
+          <div className="completion-detail d-flex">
+            <img className="progress-bar" src={progressBar} alt="progress-bar" />
+            <div className="completion-text d-flex">
+              <span className="completion">{bookInfoObj.completionPercentage}</span>
+              <span className="completed-word">Completed</span>
+            </div>
           </div>
           <div className="current-chapter d-flex">
             <span className="current-chapter-span">Current Chapter</span>
-            <span className="current-chapter-value">{bookInfoObj.currentChapter}</span>
+            <span className="current-chapter-value">
+              Chapter
+              {' '}
+              {bookInfoObj.currentChapter}
+
+            </span>
             <button type="button">Update Changes</button>
           </div>
         </div>

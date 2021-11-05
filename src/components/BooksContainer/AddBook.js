@@ -39,7 +39,7 @@ export default function AddBook() {
       title,
       category,
     };
-    if (title.length > 0 && author.length > 0) { dispatch(addBook(innerPayload, postPayload)); }
+    if (title.length > 0 && author.length > 0 && category !== 'Categories') { dispatch(addBook(innerPayload, postPayload)); }
     return null;
   };
 
@@ -54,11 +54,11 @@ export default function AddBook() {
 
   return (
     <form onSubmit={handleSubmit} action="#">
-      <h2 className="adding-span">Add a new book</h2>
+      <h2 className="adding-span">ADD NEW BOOK</h2>
       <div className="adding-form d-flex">
-        <input className="book-input" placeholder="Title" onChange={(e) => { handleTitleChange(e); }} />
-        <input className="book-input" placeholder="Author" onChange={(e) => handleAuthorChange(e)} />
-        <select defaultValue="Categories" onChange={(e) => { handleSelection(e); }} className="selector">
+        <input className="book-input" placeholder="Title" onChange={(e) => { handleTitleChange(e); }} required />
+        <input className="book-input" placeholder="Author" onChange={(e) => handleAuthorChange(e)} required />
+        <select className="selector-input" defaultValue="Categories" required onChange={(e) => { handleSelection(e); }}>
           <option disabled>Categories</option>
           <option>Action and Adventure</option>
           <option>Drama</option>

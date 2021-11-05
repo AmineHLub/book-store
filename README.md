@@ -15,7 +15,9 @@ This Website is React Bookstore Project. You can add your books, follow your pro
 
 ## Live Demo
 
-[Live Demo Link]()
+[gh-page](https://aminehlub.github.io/book-store/)
+
+[Netlify](https://book-store-aminehlub.netlify.app/#/)
 
 
 ## Getting Started
